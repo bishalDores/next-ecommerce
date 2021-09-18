@@ -11,6 +11,13 @@ axios.interceptors.request.use(
   }
 );
 
-export const getRequest = async (url, authToken = null) => {};
+export const getRequest = async (url, authToken = null) => {
+  try {
+    const response = await axios.get(url);
+    return response;
+  } catch (err) {
+    return err;
+  }
+};
 
 export const postRequest = async (url, authToken = null) => {};

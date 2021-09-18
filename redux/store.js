@@ -11,6 +11,7 @@ const bindMiddlware = (middlware) => {
 
   return applyMiddleware(...middlware);
 };
+const isClient = typeof window !== "undefined";
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {
