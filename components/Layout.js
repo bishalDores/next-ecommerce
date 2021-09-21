@@ -57,6 +57,12 @@ const Layout = ({ title, children, description }) => {
       <Head>
         <title>{title ? `${title} - Next Amazona` : "Next Amazona"}</title>
         {description && <meta name="description" content={description}></meta>}
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+        ></link>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -73,7 +79,7 @@ const Layout = ({ title, children, description }) => {
               <NextLink href="/login" passHref>
                 <Link>Login</Link>
               </NextLink>
-              <NextLink href="/" passHref>
+              <NextLink href="/cart" passHref>
                 <Link>
                   {cart.length > 0 ? (
                     <Badge color="secondary" badgeContent={cart.length}>
